@@ -1,0 +1,50 @@
+# programadores
+Proyecto introducción ingieneria  
+Juan Esteban Contreras 
+Sebastián yopasa 
+Michael Romero 
+Jaider Chavez
+
+
+Algoritmo Cara_o_Sello
+	Escribir" //////////////////////////////////////////////";
+	Escribir"//              Cara o sello                  //";
+	Escribir" //////////////////////////////////////////////";
+	Definir nombre,res1,res2,res3 Como Caracter
+	Definir moneda,saldo Como Entero
+	saldo<-2
+	Escribir "             ¿Cual es su nombre?                ";
+	Leer nombre
+	Escribir "";
+	Escribir nombre+', ¿Desea tirar la moneda y apostar 2?"; 
+	Escribir "              (MARQUE CON UN si O no)        ";
+	Escribir "";
+	Leer res1
+	Escribir "//    Recuerde que si su saldo es igual o menor";
+	Escribir  "         a 0 se dara por terminado el juego   //";
+	Escribir "";
+	Mostrar "Su saldo es igual a: ",saldo ;
+	Escribir "";
+	Escribir "¿Elige cara o sello?";
+	leer res3
+	Mientras res1="si" y saldo>0 Hacer
+		moneda = azar(2);
+		si moneda = 1 Entonces
+			res2 = "cara";
+		SiNo
+			res2 = "sello"
+		FinSi
+		Escribir "La moneda cayo en: ", res2, ", Su eleccion fue: ",res3;
+		si res2<>res3 Entonces
+			saldo= saldo-2;
+		FinSi
+		si res2==res3 Entonces
+			saldo= saldo+2
+		FinSi
+		Escribir "¿Desea seguir jugando?, saldo = ",saldo;
+		leer res1;
+	FinMientras
+	Escribir "SU saldo acumulado es igual a: ", saldo;
+	
+		
+FinAlgoritmo
